@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-08-13T23:37:04.418641+00:00",
+  "report_version": "1.1.0",
+  "task_id": "Z10",
+  "total_rounds": 1,
+  "chain_verified": true,
+  "final_convergence": {
+    "is_converged": true,
+    "convergence_type": "DISPROVEN",
+    "convergence_reason": "构造了 1 个定义域合法/约束合规/可复现的有效反例",
+    "proof_completeness": 1.0,
+    "proof_gap_count": 2,
+    "proof_circular_count": 0,
+    "stagnation_rounds": 0
+  },
+  "propositions": [
+    {
+      "proposition_id": "p10a",
+      "statement": "威尔逊定理: n 是素数 iff (n-1)! ≡ -1 (mod n)",
+      "status": "PROVEN",
+      "domain": "number_theory",
+      "derivation_step_count": 1,
+      "counter_example_count": 0,
+      "gap_count": 0
+    },
+    {
+      "proposition_id": "p10b",
+      "statement": "所有费马数 F_n = 2^(2^n)+1 都是素数",
+      "status": "DISPROVEN",
+      "domain": "number_theory",
+      "derivation_step_count": 1,
+      "counter_example_count": 1,
+      "gap_count": 1
+    },
+    {
+      "proposition_id": "p10c",
+      "statement": "不存在奇完全数",
+      "status": "PENDING",
+      "domain": "number_theory",
+      "derivation_step_count": 1,
+      "counter_example_count": 0,
+      "gap_count": 1
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "math_snap_Z10_1",
+      "round_number": 1,
+      "timestamp": "2026-08-13T23:37:04.418198+00:00",
+      "content_hash": "52c4316383b6fde4649c700dacbc502c6096371ef813e0d0cad2c71924353276",
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 1 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 2,
+        "proof_circular_count": 0,
+        "stagnation_rounds": 0
+      }
+    }
+  ],
+  "plugin_results": {
+    "sympy_bridge": {
+      "plugin_name": "sympy_bridge",
+      "status": "enabled",
+      "error": "",
+      "elapsed_ms": 0.00667572021484375
+    },
+    "lean_repl_bridge": {
+      "plugin_name": "lean_repl_bridge",
+      "status": "disabled",
+      "error": "",
+      "elapsed_ms": 0.002384185791015625
+    },
+    "stagnation_analyzer": {
+      "plugin_name": "stagnation_analyzer",
+      "status": "enabled",
+      "error": "",
+      "elapsed_ms": 0.016450881958007812
+    }
+  }
+}

@@ -1,0 +1,1085 @@
+{
+  "generated_at": "2026-08-13T23:37:04.419786+00:00",
+  "version": "1.1.0",
+  "description": "Module-MathB v1.1 真实开放数论子命题仿真实验数据集",
+  "total_scenarios": 10,
+  "passed": 10,
+  "branch_coverage": {
+    "PROVEN": 3,
+    "DISPROVEN": 4,
+    "FORCED_TERMINATE": 3
+  },
+  "records": [
+    {
+      "scenario_id": "Z1",
+      "name": "sympy_bridge",
+      "expected_branch": "PROVEN",
+      "actual_branch": "PROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p1",
+          "statement": "对任意整数 n>1，存在素数 p 满足 n < p < 2n",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 0,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.398880+00:00",
+          "updated_at": "2026-08-13T23:37:04.399282+00:00"
+        }
+      ],
+      "logical_gap_count": 0,
+      "gap_descriptions": [],
+      "hidden_assumption_count": 0,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "",
+      "stagnation_root_causes": [],
+      "stagnation_suggestions": [],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.023126602172851562
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "PROVEN",
+        "convergence_reason": "所有命题获得无断层/无跳跃/无循环/无隐性假设的完整证明",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 0,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 0,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z1_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z2",
+      "name": "威尔逊定理: n 是素数当且仅当 (n-1)! ≡ -1 (mod n)",
+      "expected_branch": "PROVEN",
+      "actual_branch": "PROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p2",
+          "statement": "n 是素数当且仅当 (n-1)! ≡ -1 (mod n)",
+          "domain": "number_theory",
+          "difficulty": "intermediate",
+          "status": "PROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 3,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 0,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.401463+00:00",
+          "updated_at": "2026-08-13T23:37:04.401526+00:00"
+        }
+      ],
+      "logical_gap_count": 0,
+      "gap_descriptions": [],
+      "hidden_assumption_count": 0,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "",
+      "stagnation_root_causes": [],
+      "stagnation_suggestions": [],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {}
+      },
+      "plugin_results": {},
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "PROVEN",
+        "convergence_reason": "所有命题获得无断层/无跳跃/无循环/无隐性假设的完整证明",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 0,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 0,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z2_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z3",
+      "name": "lean_repl_bridge",
+      "expected_branch": "PROVEN",
+      "actual_branch": "PROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p3",
+          "statement": "方程 x^a - y^b = 1 的正整数解 (x,a,y,b>1) 仅有 (3,2,2,3)",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 0,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.403054+00:00",
+          "updated_at": "2026-08-13T23:37:04.403103+00:00"
+        }
+      ],
+      "logical_gap_count": 0,
+      "gap_descriptions": [],
+      "hidden_assumption_count": 0,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "",
+      "stagnation_root_causes": [],
+      "stagnation_suggestions": [],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {
+          "lean_repl_bridge": {
+            "enabled": true,
+            "timeout_seconds": 30
+          }
+        }
+      },
+      "plugin_results": {
+        "lean_repl_bridge": {
+          "plugin_name": "lean_repl_bridge",
+          "status": "disabled",
+          "output": {
+            "lean_available": false,
+            "message": "Lean 4 未安装或不可用"
+          },
+          "error": "",
+          "elapsed_ms": 0.00667572021484375
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "PROVEN",
+        "convergence_reason": "所有命题获得无断层/无跳跃/无循环/无隐性假设的完整证明",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 0,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 0,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z3_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z4",
+      "name": "sympy_bridge",
+      "expected_branch": "DISPROVEN",
+      "actual_branch": "DISPROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p4",
+          "statement": "所有费马数 F_n = 2^(2^n) + 1 都是素数",
+          "domain": "number_theory",
+          "difficulty": "intermediate",
+          "status": "DISPROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 1,
+          "valid_counter_example_count": 1,
+          "validation_report_count": 1,
+          "gap_count": 1,
+          "circular_count": 0,
+          "hidden_assumption_count": 1,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.404724+00:00",
+          "updated_at": "2026-08-13T23:37:04.404780+00:00"
+        }
+      ],
+      "logical_gap_count": 1,
+      "gap_descriptions": [
+        "[p4] 仅凭有限特例归纳，无法推广到全体"
+      ],
+      "hidden_assumption_count": 1,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "",
+      "stagnation_root_causes": [],
+      "stagnation_suggestions": [],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.0069141387939453125
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 1 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 1,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 1,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z4_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z5",
+      "name": "Euler 多项式素数猜想: n²+n+41 对所有自然数 n 都是素数",
+      "expected_branch": "DISPROVEN",
+      "actual_branch": "DISPROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p5",
+          "statement": "n² + n + 41 对所有自然数 n 都是素数",
+          "domain": "number_theory",
+          "difficulty": "elementary",
+          "status": "DISPROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 2,
+          "valid_counter_example_count": 2,
+          "validation_report_count": 1,
+          "gap_count": 1,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.406493+00:00",
+          "updated_at": "2026-08-13T23:37:04.406552+00:00"
+        }
+      ],
+      "logical_gap_count": 1,
+      "gap_descriptions": [
+        "[p5] 仅凭 40 个特例归纳，需要一般性证明"
+      ],
+      "hidden_assumption_count": 0,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [
+        "推导步骤 p5_s1 存在跳步信号词: '仅凭特例归纳'"
+      ],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "",
+      "stagnation_root_causes": [],
+      "stagnation_suggestions": [],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {}
+      },
+      "plugin_results": {},
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 2 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 1,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 0,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z5_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z6",
+      "name": "stagnation_analyzer",
+      "expected_branch": "DISPROVEN",
+      "actual_branch": "DISPROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p6",
+          "statement": "所有素数均形如 6k±1（即 6k+1 或 6k-1）",
+          "domain": "number_theory",
+          "difficulty": "elementary",
+          "status": "DISPROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 3,
+          "counter_example_count": 2,
+          "valid_counter_example_count": 2,
+          "validation_report_count": 1,
+          "gap_count": 1,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.408034+00:00",
+          "updated_at": "2026-08-13T23:37:04.408100+00:00"
+        }
+      ],
+      "logical_gap_count": 1,
+      "gap_descriptions": [
+        "[p6] 命题未排除 n=2,3 的边界情况，陈述不严谨"
+      ],
+      "hidden_assumption_count": 0,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "low",
+      "stagnation_root_causes": [
+        "未检测到明显停滞原因，可能是命题本身难度过高"
+      ],
+      "stagnation_suggestions": [
+        "建议人工介入，评估命题是否可解",
+        "建议查阅文献，确认是否为已知开放问题",
+        "建议降低命题难度或缩小范围"
+      ],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.0059604644775390625
+        },
+        "stagnation_analyzer": {
+          "plugin_name": "stagnation_analyzer",
+          "status": "enabled",
+          "output": {
+            "diagnosis": {
+              "root_causes": [
+                "未检测到明显停滞原因，可能是命题本身难度过高"
+              ],
+              "severity": "low",
+              "gap_patterns": [
+                "最常见缺口: '命题未排除 n=2,3 的边界情况，陈述不严谨' (出现 1 次)"
+              ],
+              "suggestions": [
+                "建议人工介入，评估命题是否可解",
+                "建议查阅文献，确认是否为已知开放问题",
+                "建议降低命题难度或缩小范围"
+              ],
+              "stagnation_rounds": 0,
+              "gap_type_count": 1,
+              "total_gaps": 1,
+              "stagnation_classification": {
+                "primary_category": "intrinsic_difficulty",
+                "secondary_factors": [],
+                "confidence": "medium",
+                "recommended_action": "降低命题难度或人工介入",
+                "avg_validation_score": 0.6,
+                "stagnation_rounds": 0,
+                "proposition_count": 1
+              },
+              "matched_patterns": [
+                "SP-005"
+              ]
+            },
+            "stagnation_rounds": 0,
+            "round_number": 1,
+            "proposition_count": 1
+          },
+          "error": "",
+          "elapsed_ms": 0.0400543212890625
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 2 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 1,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 0,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z6_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z7",
+      "name": "stagnation_analyzer",
+      "expected_branch": "FORCED_TERMINATE",
+      "actual_branch": "FORCED_TERMINATE",
+      "total_rounds": 4,
+      "hash_chain_valid": true,
+      "hash_chain_length": 4,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p7",
+          "statement": "对任意正整数 n，Collatz 序列 n→n/2 (偶) 或 3n+1 (奇) 最终必到达 1",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PENDING",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 2,
+          "circular_count": 0,
+          "hidden_assumption_count": 1,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.409965+00:00",
+          "updated_at": "2026-08-13T23:37:04.410014+00:00"
+        }
+      ],
+      "logical_gap_count": 2,
+      "gap_descriptions": [
+        "[p7] 有限验证不能代替无限证明，存在非平凡循环或发散的可能",
+        "[p7] '几乎所有'不等于'所有'，零测度反例可能仍存在"
+      ],
+      "hidden_assumption_count": 1,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "medium",
+      "stagnation_root_causes": [
+        "校验平均分仅 0.15（严重退化），推导框架存在结构性缺陷"
+      ],
+      "stagnation_suggestions": [
+        "建议重新审视命题前提和推导规则",
+        "建议检查是否存在概念混淆或符号滥用",
+        "建议增加定义域约束，缩小证明范围"
+      ],
+      "stagnation_rounds": 3,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.003337860107421875
+        },
+        "stagnation_analyzer": {
+          "plugin_name": "stagnation_analyzer",
+          "status": "enabled",
+          "output": {
+            "diagnosis": {
+              "root_causes": [
+                "校验平均分仅 0.15（严重退化），推导框架存在结构性缺陷"
+              ],
+              "severity": "medium",
+              "gap_patterns": [
+                "最常见缺口: '有限验证不能代替无限证明，存在非平凡循环或发散的可能' (出现 1 次)"
+              ],
+              "suggestions": [
+                "建议重新审视命题前提和推导规则",
+                "建议检查是否存在概念混淆或符号滥用",
+                "建议增加定义域约束，缩小证明范围"
+              ],
+              "stagnation_rounds": 2,
+              "gap_type_count": 2,
+              "total_gaps": 2,
+              "stagnation_classification": {
+                "primary_category": "derivation_quality_decay",
+                "secondary_factors": [],
+                "confidence": "high",
+                "recommended_action": "重构推导框架",
+                "avg_validation_score": 0.15,
+                "stagnation_rounds": 2,
+                "proposition_count": 1
+              },
+              "matched_patterns": [
+                "SP-002"
+              ]
+            },
+            "stagnation_rounds": 2,
+            "round_number": 4,
+            "proposition_count": 1
+          },
+          "error": "",
+          "elapsed_ms": 0.011682510375976562
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "FORCED_TERMINATE",
+        "convergence_reason": "连续 3 轮无进展，无进展熵降为 0，强制终止",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 2,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 1,
+        "stagnation_rounds": 3
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z7_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z8",
+      "name": "stagnation_analyzer",
+      "expected_branch": "FORCED_TERMINATE",
+      "actual_branch": "FORCED_TERMINATE",
+      "total_rounds": 4,
+      "hash_chain_valid": true,
+      "hash_chain_length": 4,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p8",
+          "statement": "对任意正整数 n，在 n² 与 (n+1)² 之间至少存在一个素数",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PENDING",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 2,
+          "circular_count": 1,
+          "hidden_assumption_count": 1,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.412566+00:00",
+          "updated_at": "2026-08-13T23:37:04.412627+00:00"
+        }
+      ],
+      "logical_gap_count": 2,
+      "gap_descriptions": [
+        "[p8] 概率期望≠确定性存在，素数分布可能存在局部异常",
+        "[p8] 依赖更强但同样未证明的猜想，循环依赖"
+      ],
+      "hidden_assumption_count": 1,
+      "circular_count": 1,
+      "syntax_valid": true,
+      "syntax_errors": [
+        "推导步骤 p8_s2 存在循环论证: 依赖未证明的更强猜想"
+      ],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "medium",
+      "stagnation_root_causes": [
+        "校验平均分仅 0.10（严重退化），推导框架存在结构性缺陷"
+      ],
+      "stagnation_suggestions": [
+        "建议重新审视命题前提和推导规则",
+        "建议检查是否存在概念混淆或符号滥用",
+        "建议增加定义域约束，缩小证明范围"
+      ],
+      "stagnation_rounds": 3,
+      "plugin_config": {
+        "plugins": {
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "stagnation_analyzer": {
+          "plugin_name": "stagnation_analyzer",
+          "status": "enabled",
+          "output": {
+            "diagnosis": {
+              "root_causes": [
+                "校验平均分仅 0.10（严重退化），推导框架存在结构性缺陷"
+              ],
+              "severity": "medium",
+              "gap_patterns": [
+                "最常见缺口: '概率期望≠确定性存在，素数分布可能存在局部异常' (出现 1 次)"
+              ],
+              "suggestions": [
+                "建议重新审视命题前提和推导规则",
+                "建议检查是否存在概念混淆或符号滥用",
+                "建议增加定义域约束，缩小证明范围"
+              ],
+              "stagnation_rounds": 2,
+              "gap_type_count": 2,
+              "total_gaps": 2,
+              "stagnation_classification": {
+                "primary_category": "derivation_quality_decay",
+                "secondary_factors": [],
+                "confidence": "high",
+                "recommended_action": "重构推导框架",
+                "avg_validation_score": 0.1,
+                "stagnation_rounds": 2,
+                "proposition_count": 1
+              },
+              "matched_patterns": [
+                "SP-002"
+              ]
+            },
+            "stagnation_rounds": 2,
+            "round_number": 4,
+            "proposition_count": 1
+          },
+          "error": "",
+          "elapsed_ms": 0.010967254638671875
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "FORCED_TERMINATE",
+        "convergence_reason": "连续 3 轮无进展，无进展熵降为 0，强制终止",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 2,
+        "proof_circular_count": 1,
+        "proof_hidden_assumption_count": 1,
+        "stagnation_rounds": 3
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z8_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z9",
+      "name": "stagnation_analyzer",
+      "expected_branch": "FORCED_TERMINATE",
+      "actual_branch": "FORCED_TERMINATE",
+      "total_rounds": 4,
+      "hash_chain_valid": true,
+      "hash_chain_length": 4,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p9a",
+          "statement": "不存在奇完全数",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PENDING",
+          "iteration_depth": 0,
+          "derivation_step_count": 2,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 2,
+          "circular_count": 0,
+          "hidden_assumption_count": 1,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.414853+00:00",
+          "updated_at": "2026-08-13T23:37:04.414916+00:00"
+        },
+        {
+          "proposition_id": "p9b",
+          "statement": "奇完全数若存在，σ(n)=2n，且 n 为奇数",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 1,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 0,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.414861+00:00",
+          "updated_at": "2026-08-13T23:37:04.414921+00:00"
+        }
+      ],
+      "logical_gap_count": 2,
+      "gap_descriptions": [
+        "[p9a] 下界不断提高，但无法排除存在性",
+        "[p9a] 有限搜索不等于证明了不存在性"
+      ],
+      "hidden_assumption_count": 1,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "medium",
+      "stagnation_root_causes": [
+        "校验平均分仅 0.45（轻度退化），建议优化推导逻辑"
+      ],
+      "stagnation_suggestions": [
+        "建议重新审视命题前提和推导规则",
+        "建议检查是否存在概念混淆或符号滥用",
+        "建议增加定义域约束，缩小证明范围"
+      ],
+      "stagnation_rounds": 3,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          },
+          "lean_repl_bridge": {
+            "enabled": true,
+            "timeout_seconds": 30
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.01239776611328125
+        },
+        "lean_repl_bridge": {
+          "plugin_name": "lean_repl_bridge",
+          "status": "disabled",
+          "output": {
+            "lean_available": false,
+            "message": "Lean 4 未安装或不可用"
+          },
+          "error": "",
+          "elapsed_ms": 0.0021457672119140625
+        },
+        "stagnation_analyzer": {
+          "plugin_name": "stagnation_analyzer",
+          "status": "enabled",
+          "output": {
+            "diagnosis": {
+              "root_causes": [
+                "校验平均分仅 0.45（轻度退化），建议优化推导逻辑"
+              ],
+              "severity": "medium",
+              "gap_patterns": [
+                "最常见缺口: '下界不断提高，但无法排除存在性' (出现 1 次)"
+              ],
+              "suggestions": [
+                "建议重新审视命题前提和推导规则",
+                "建议检查是否存在概念混淆或符号滥用",
+                "建议增加定义域约束，缩小证明范围"
+              ],
+              "stagnation_rounds": 2,
+              "gap_type_count": 2,
+              "total_gaps": 2,
+              "stagnation_classification": {
+                "primary_category": "derivation_quality_decay",
+                "secondary_factors": [],
+                "confidence": "medium",
+                "recommended_action": "优化推导逻辑",
+                "avg_validation_score": 0.45,
+                "stagnation_rounds": 2,
+                "proposition_count": 2
+              },
+              "matched_patterns": [
+                "SP-002"
+              ]
+            },
+            "stagnation_rounds": 2,
+            "round_number": 4,
+            "proposition_count": 2
+          },
+          "error": "",
+          "elapsed_ms": 0.0324249267578125
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "FORCED_TERMINATE",
+        "convergence_reason": "连续 3 轮无进展，无进展熵降为 0，强制终止",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 2,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 1,
+        "stagnation_rounds": 3
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z9_report.md",
+      "error": ""
+    },
+    {
+      "scenario_id": "Z10",
+      "name": "stagnation_analyzer",
+      "expected_branch": "DISPROVEN",
+      "actual_branch": "DISPROVEN",
+      "total_rounds": 1,
+      "hash_chain_valid": true,
+      "hash_chain_length": 1,
+      "passed": true,
+      "propositions": [
+        {
+          "proposition_id": "p10a",
+          "statement": "威尔逊定理: n 是素数 iff (n-1)! ≡ -1 (mod n)",
+          "domain": "number_theory",
+          "difficulty": "intermediate",
+          "status": "PROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 1,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 0,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.417865+00:00",
+          "updated_at": "2026-08-13T23:37:04.417936+00:00"
+        },
+        {
+          "proposition_id": "p10b",
+          "statement": "所有费马数 F_n = 2^(2^n)+1 都是素数",
+          "domain": "number_theory",
+          "difficulty": "intermediate",
+          "status": "DISPROVEN",
+          "iteration_depth": 0,
+          "derivation_step_count": 1,
+          "counter_example_count": 1,
+          "valid_counter_example_count": 1,
+          "validation_report_count": 1,
+          "gap_count": 1,
+          "circular_count": 0,
+          "hidden_assumption_count": 0,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.417873+00:00",
+          "updated_at": "2026-08-13T23:37:04.417941+00:00"
+        },
+        {
+          "proposition_id": "p10c",
+          "statement": "不存在奇完全数",
+          "domain": "number_theory",
+          "difficulty": "advanced",
+          "status": "PENDING",
+          "iteration_depth": 0,
+          "derivation_step_count": 1,
+          "counter_example_count": 0,
+          "valid_counter_example_count": 0,
+          "validation_report_count": 1,
+          "gap_count": 1,
+          "circular_count": 0,
+          "hidden_assumption_count": 1,
+          "proven_by": "",
+          "proof_chain_hash": "",
+          "created_at": "2026-08-13T23:37:04.417876+00:00",
+          "updated_at": "2026-08-13T23:37:04.417946+00:00"
+        }
+      ],
+      "logical_gap_count": 2,
+      "gap_descriptions": [
+        "[p10b] 仅凭前5个特例归纳，Euler 发现 F₅=641×6700417",
+        "[p10c] 有限搜索无法证明不存在性"
+      ],
+      "hidden_assumption_count": 1,
+      "circular_count": 0,
+      "syntax_valid": true,
+      "syntax_errors": [],
+      "self_contradiction_found": false,
+      "variable_domain_valid": true,
+      "symbol_consistency_valid": true,
+      "stagnation_severity": "low",
+      "stagnation_root_causes": [
+        "校验平均分仅 0.47（轻度退化），建议优化推导逻辑"
+      ],
+      "stagnation_suggestions": [
+        "建议重新审视命题前提和推导规则",
+        "建议检查是否存在概念混淆或符号滥用",
+        "建议增加定义域约束，缩小证明范围"
+      ],
+      "stagnation_rounds": 0,
+      "plugin_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10
+          },
+          "lean_repl_bridge": {
+            "enabled": true,
+            "timeout_seconds": 30
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10
+          }
+        }
+      },
+      "plugin_results": {
+        "sympy_bridge": {
+          "plugin_name": "sympy_bridge",
+          "status": "enabled",
+          "output": {
+            "n": 0,
+            "is_prime": false
+          },
+          "error": "",
+          "elapsed_ms": 0.00667572021484375
+        },
+        "lean_repl_bridge": {
+          "plugin_name": "lean_repl_bridge",
+          "status": "disabled",
+          "output": {
+            "lean_available": false,
+            "message": "Lean 4 未安装或不可用"
+          },
+          "error": "",
+          "elapsed_ms": 0.002384185791015625
+        },
+        "stagnation_analyzer": {
+          "plugin_name": "stagnation_analyzer",
+          "status": "enabled",
+          "output": {
+            "diagnosis": {
+              "root_causes": [
+                "校验平均分仅 0.47（轻度退化），建议优化推导逻辑"
+              ],
+              "severity": "low",
+              "gap_patterns": [
+                "最常见缺口: '仅凭前5个特例归纳，Euler 发现 F₅=641×6700417' (出现 1 次)"
+              ],
+              "suggestions": [
+                "建议重新审视命题前提和推导规则",
+                "建议检查是否存在概念混淆或符号滥用",
+                "建议增加定义域约束，缩小证明范围"
+              ],
+              "stagnation_rounds": 0,
+              "gap_type_count": 2,
+              "total_gaps": 2,
+              "stagnation_classification": {
+                "primary_category": "derivation_quality_decay",
+                "secondary_factors": [],
+                "confidence": "medium",
+                "recommended_action": "优化推导逻辑",
+                "avg_validation_score": 0.47,
+                "stagnation_rounds": 0,
+                "proposition_count": 3
+              },
+              "matched_patterns": [
+                "SP-002"
+              ]
+            },
+            "stagnation_rounds": 0,
+            "round_number": 1,
+            "proposition_count": 3
+          },
+          "error": "",
+          "elapsed_ms": 0.016450881958007812
+        }
+      },
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 1 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 2,
+        "proof_circular_count": 0,
+        "proof_hidden_assumption_count": 1,
+        "stagnation_rounds": 0
+      },
+      "report_path": "/workspace/multi-agent-brain-orchestrator/module_math_b/tests_mathb/simulation_output_v1_1/Z10_report.md",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "task_meta": {
+    "task_id": "mathb_demo_001",
+    "task_type": "MATH_PROOF",
+    "max_iterations": 8,
+    "max_depth": 4,
+    "resource_override": {
+      "ram_fraction_limit": 0.6,
+      "enable_mathb_resource_lock": true
+    },
+    "human_in_the_loop": false,
+    "description": "Module-MathB v1.0 端到端验证任务：数论猜想探索"
+  },
+  "proposition": {
+    "statement": "对于任意大于 1 的正整数 n，如果 2^n − 1 是素数，那么 n 一定是素数；反过来，如果 n 是素数，则 2^n − 1 必定是素数。",
+    "domain": "number_theory",
+    "difficulty": "medium",
+    "expected_behavior": [
+      "拆解为两个子命题",
+      "对正向命题做推导验证",
+      "对反向命题搜索反例",
+      "记录逻辑缺口与特例",
+      "更新 math_hypo_pool 四态状态",
+      "触发 math_validator 三层校验流水线",
+      "生成 MATH_B_EXT 标记快照并写入哈希链",
+      "命中 DISPROVEN 收敛条件自动终止迭代"
+    ]
+  },
+  "mathb_config": {
+    "disable_bayesian": true,
+    "convergence_rules": "strict_math_only",
+    "validator_layers": ["syntax","logic_fault_detect","red_team"],
+    "used_template_set": ["proof_construct","counterexample_search","gap_review","numerical_experiment"],
+    "fallback_on_stall": true,
+    "stall_entropy_threshold": 0.05
+  },
+  "orchestrator_hints": {
+    "do_not_modify_agent_system_prompt": true,
+    "only_use_payload_template_injection": true,
+    "preserve_original_b1_flow_when_not_math_task": true
+  }
+}

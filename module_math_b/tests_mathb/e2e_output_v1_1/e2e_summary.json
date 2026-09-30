@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-13T22:42:43.332223+00:00",
+  "version": "1.1.0",
+  "e2e_01": {
+    "scenario": "梅森数猜想 + SymPy 插件",
+    "final_status": "PROVEN",
+    "total_rounds": 1,
+    "plugin_results_count": 1
+  },
+  "e2e_02": {
+    "scenario": "开放类子命题 INCONCLUSIVE 停滞",
+    "final_status": "PROVEN",
+    "total_rounds": 1,
+    "plugin_results_count": 1
+  }
+}

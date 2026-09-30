@@ -1,0 +1,114 @@
+{
+  "description": "Module-MathB v1.1 插件配置样例",
+  "version": "1.1.0",
+  "samples": [
+    {
+      "name": "sympy 插件启用 — 梅森数验证",
+      "mathb_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10,
+            "memory_limit_mb": 128
+          },
+          "lean_repl_bridge": {
+            "enabled": false
+          },
+          "stagnation_analyzer": {
+            "enabled": false
+          }
+        }
+      },
+      "usage": "用于素数判定、因式分解等符号计算验证"
+    },
+    {
+      "name": "停滞分析插件启用 — 开放问题探索",
+      "mathb_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": false
+          },
+          "lean_repl_bridge": {
+            "enabled": false
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10,
+            "memory_limit_mb": 64
+          }
+        }
+      },
+      "usage": "用于分析数学迭代停滞的根因，生成诊断建议"
+    },
+    {
+      "name": "全插件启用 — 完整形式化验证",
+      "mathb_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 10,
+            "memory_limit_mb": 128
+          },
+          "lean_repl_bridge": {
+            "enabled": true,
+            "timeout_seconds": 30,
+            "memory_limit_mb": 256
+          },
+          "stagnation_analyzer": {
+            "enabled": true,
+            "timeout_seconds": 10,
+            "memory_limit_mb": 64
+          }
+        }
+      },
+      "usage": "完整验证流水线：符号计算 + 形式化验证 + 停滞分析",
+      "note": "lean_repl_bridge 需要本地安装 Lean 4，否则优雅降级"
+    },
+    {
+      "name": "默认配置（插件全关）",
+      "mathb_config": {
+        "plugins": {}
+      },
+      "usage": "所有插件默认关闭，仅使用 v1.0 核心功能"
+    },
+    {
+      "name": "自定义超时限制",
+      "mathb_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true,
+            "timeout_seconds": 5,
+            "memory_limit_mb": 64,
+            "extra_args": {
+              "precision": "high"
+            }
+          }
+        }
+      },
+      "usage": "通过 extra_args 传递插件特定参数"
+    }
+  ],
+  "plugin_descriptions": {
+    "sympy_bridge": "SymPy 符号计算桥接 — 素数判定、因式分解、模运算",
+    "lean_repl_bridge": "Lean 4 REPL 形式化验证桥接 — 需要本地安装 Lean 4",
+    "stagnation_analyzer": "停滞根因分析 — 缺口模式识别、推导停滞检测、诊断建议"
+  },
+  "integration_example": {
+    "task_json": {
+      "query": "验证命题：若 n 为素数，则 2^n-1 为素数",
+      "task_id": "example_task_001",
+      "task_type": "number_theory",
+      "mathb_config": {
+        "plugins": {
+          "sympy_bridge": {
+            "enabled": true
+          },
+          "stagnation_analyzer": {
+            "enabled": true
+          }
+        }
+      }
+    },
+    "expected_behavior": "1. math_router 识别 MATH_TASK → 初始化数学集群\n2. 加载插件配置 → sympy_bridge 和 stagnation_analyzer 启用\n3. 每轮迭代执行已启用插件\n4. 收敛后导出报告，包含插件执行结果\n5. 会话结束，插件和模块完全销毁"
+  }
+}

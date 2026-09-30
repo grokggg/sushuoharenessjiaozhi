@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-08-13T23:37:04.406889+00:00",
+  "report_version": "1.1.0",
+  "task_id": "Z5",
+  "total_rounds": 1,
+  "chain_verified": true,
+  "final_convergence": {
+    "is_converged": true,
+    "convergence_type": "DISPROVEN",
+    "convergence_reason": "构造了 2 个定义域合法/约束合规/可复现的有效反例",
+    "proof_completeness": 1.0,
+    "proof_gap_count": 1,
+    "proof_circular_count": 0,
+    "stagnation_rounds": 0
+  },
+  "propositions": [
+    {
+      "proposition_id": "p5",
+      "statement": "n² + n + 41 对所有自然数 n 都是素数",
+      "status": "DISPROVEN",
+      "domain": "number_theory",
+      "derivation_step_count": 2,
+      "counter_example_count": 2,
+      "gap_count": 1
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "math_snap_Z5_1",
+      "round_number": 1,
+      "timestamp": "2026-08-13T23:37:04.406581+00:00",
+      "content_hash": "1d6dc151ea70ba77e411a49e70324d9920325f519dc11f410ae53b6b6cf9de84",
+      "convergence_report": {
+        "is_converged": true,
+        "convergence_type": "DISPROVEN",
+        "convergence_reason": "构造了 2 个定义域合法/约束合规/可复现的有效反例",
+        "proof_completeness": 1.0,
+        "proof_gap_count": 1,
+        "proof_circular_count": 0,
+        "stagnation_rounds": 0
+      }
+    }
+  ],
+  "plugin_results": {}
+}

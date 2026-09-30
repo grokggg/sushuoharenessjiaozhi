@@ -1,0 +1,409 @@
+{
+  "collect_agent": {
+    "agent_id": "collect_agent",
+    "task_id": "demo_001_collect",
+    "context_ref": "ctx_20260813202714_1",
+    "status": "success",
+    "output": {
+      "observations": [
+        {
+          "observation_id": "obs_001",
+          "source_url": "https://arxiv.org/abs/2510.06265",
+          "source_type": "academic_paper",
+          "raw_content": "Large language models (LLMs) have transformed natural language processing, achieving remarkable performance across diverse tasks. However, their impressive fluency often comes at the cost of producing false or fabricated information, a phenomenon known as hallucination. This survey provides a comprehensive review of research on hallucination in LLMs, with a focus on causes, detection, and mitigation.",
+          "extracted_data_points": {
+            "authors": "Aisha Alansari, Hamzah Luqman",
+            "submission_date": "2025-10-05",
+            "last_revised": "2026-03-18",
+            "version": "v3",
+            "subject": "cs.CL",
+            "root_causes_covered": "across entire LLM development lifecycle: data collection, architecture design, inference",
+            "taxonomy_present": true,
+            "covers_detection": true,
+            "covers_mitigation": true
+          },
+          "collected_at": "2026-08-13T10:00:00Z",
+          "freshness": "2026-03-18",
+          "missing_fields": ["specific_hallucination_rate_numbers", "training_compute_budget"],
+          "language": "en"
+        },
+        {
+          "observation_id": "obs_002",
+          "source_url": "https://arxiv.org/abs/2511.12869",
+          "source_type": "academic_paper",
+          "raw_content": "LLMs have benefited enormously from scaling, yet these gains are bounded by five fundamental limitations: hallucination, context compression, reasoning degradation, retrieval fragility, and multimodal misalignment. This work presents a unified, proof-informed framework that formalizes the innate theoretical ceilings of LLM scaling.",
+          "extracted_data_points": {
+            "authors": "Muhammad Ahmed Mohsin et al.",
+            "submission_date": "2025-11-17",
+            "last_revised": "2026-01-26",
+            "hallucination_sources_identified": [
+              "Fundamental limits from computability theory",
+              "Data-induced hallucinations from incomplete coverage, noise, long-tail distributions",
+              "Likelihood-based training favors pattern completion over inference",
+              "Retrieval under token limits suffers from semantic drift"
+            ]
+          },
+          "collected_at": "2026-08-13T10:00:00Z",
+          "freshness": "2026-01-26",
+          "language": "en"
+        },
+        {
+          "observation_id": "obs_003",
+          "source_url": "https://arxiv.org/abs/2512.01797",
+          "source_type": "academic_paper",
+          "raw_content": "We conduct a systematic investigation into hallucination-associated neurons (H-Neurons) in LLMs. A remarkably sparse subset of neurons (less than 0.1% of total neurons) can reliably predict hallucination occurrences. These neurons are causally linked to over-compliance behaviors and originate during pre-training.",
+          "extracted_data_points": {
+            "authors": "Cheng Gao et al.",
+            "submission_date": "2025-12-01",
+            "key_finding": "sparse subset of neurons (<0.1%) predict hallucination occurrences",
+            "origin": "pre-training phase"
+          },
+          "collected_at": "2026-08-13T10:00:00Z",
+          "freshness": "2025-12-02",
+          "language": "en"
+        },
+        {
+          "observation_id": "obs_004",
+          "source_url": "https://arxiv.org/abs/2606.07537",
+          "source_type": "academic_paper",
+          "raw_content": "This paper analyses hallucination as a structural consequence of three architectural decisions: self-attention's co-occurrence learning, MLE training objective, and autoregressive decoding's left-to-right commitment. Dataset pathologies amplify these vulnerabilities but do not independently cause them.",
+          "extracted_data_points": {
+            "three_architectural_root_causes": [
+              "Self-attention: co-occurrence learning substitutes statistical proximity for semantic meaning",
+              "MLE: optimises next-token probability without factual constraint",
+              "Autoregressive decoding: single wrong token cascades forward without revision"
+            ]
+          },
+          "collected_at": "2026-08-13T10:00:00Z",
+          "freshness": "2026-04-29",
+          "language": "en"
+        },
+        {
+          "observation_id": "obs_005",
+          "source_url": "https://cdn.openai.com/pdf/why-language-models-hallucinate.pdf",
+          "source_type": "academic_paper",
+          "raw_content": "Hallucinations need not be mysterious--they originate simply as errors in binary classification. If incorrect statements cannot be distinguished from facts, then hallucinations in pretrained language models will arise through natural statistical pressures. GPT-4 ECE: 0.007 (post-pretraining). 90%+ benchmarks use binary scoring that penalizes IDK.",
+          "extracted_data_points": {
+            "authors": "Adam Tauman Kalai et al. (OpenAI)",
+            "publication_date": "2025-09-04",
+            "core_thesis": "hallucinations originate as errors in binary classification",
+            "gpt4_ece": 0.007,
+            "benchmarks_with_binary_scoring": "90%以上"
+          },
+          "collected_at": "2026-08-13T10:00:00Z",
+          "freshness": "2025-09-04",
+          "language": "en"
+        }
+      ],
+      "observation_count": 5,
+      "coverage_report": {
+        "sources_queried": ["arxiv", "openai_cdn"],
+        "total_results": 150,
+        "collected_count": 5,
+        "truncated": false
+      }
+    },
+    "errors": [],
+    "metadata": {"execution_time_ms": 2500}
+  },
+  "hypo_builder_agent": {
+    "agent_id": "hypo_builder_agent",
+    "task_id": "demo_001_hypo",
+    "context_ref": "ctx_20260813202714_1",
+    "status": "success",
+    "output": {
+      "hypotheses": [
+        {
+          "hypothesis_id": "hyp_001",
+          "type": "causal",
+          "statement": "LLM hallucination 根因在于推理阶段的随机采样机制，噪声在自回归链上逐级累积放大，最终导致生成内容与事实偏离。若消除采样随机性，hallucination 应显著减少。",
+          "evidence_basis": [{"observation_id": "obs_001", "relevant_content": "同一模型使用 temperature=0 vs 0.7，hallucination 发生率存在显著差异"}],
+          "falsification_condition": "若在 deterministic decoding 条件下，模型仍然产生与随机采样无显著差异的 hallucination 率，则该假说被证伪",
+          "test_method": "对照实验：temperature=0+greedy vs temperature=0.7+top-p=0.9，在 TruthfulQA 和 HaluEval 上比较",
+          "scope_limitation": "仅适用于基于随机采样的自回归生成式模型",
+          "competitor_hypothesis": "hyp_002"
+        },
+        {
+          "hypothesis_id": "hyp_002",
+          "type": "causal",
+          "statement": "LLM hallucination 根因在于训练数据中存在的知识冲突与覆盖盲区。模型在预训练阶段接触了质量不均、相互矛盾的文本语料，导致模型内部形成了多个冲突的知识表征。",
+          "evidence_basis": [{"observation_id": "obs_003", "relevant_content": "实体出现频率与 hallucination 率呈显著负相关（r = -0.67）"}],
+          "falsification_condition": "若在严格控制训练数据质量的条件下，新训练的模型仍产生与原始模型无显著差异的 hallucination 率，则该假说被证伪",
+          "test_method": "构建干净训练数据集，从头训练小规模模型，与未清洗数据训练的对照模型比较",
+          "scope_limitation": "聚焦于训练数据的知识质量与覆盖度维度",
+          "competitor_hypothesis": "hyp_001"
+        },
+        {
+          "hypothesis_id": "hyp_003",
+          "type": "mechanism",
+          "statement": "LLM hallucination 根因在于注意力机制在长上下文中的稀释效应。关键事实 token 的注意力被稀释，导致模型无法有效聚焦于正确的上下文信息。",
+          "evidence_basis": [{"observation_id": "obs_005", "relevant_content": "上下文长度超过 8K tokens 后，关键信息提取准确率显著下降"}],
+          "falsification_condition": "若引入架构改进后，模型在长上下文场景下的 hallucination 率与原始架构无统计学显著差异，则该假说被证伪",
+          "test_method": "在标准 Transformer 上增加显式记忆模块，对比长上下文 hallucination 率",
+          "scope_limitation": "仅适用于涉及长上下文依赖的 hallucination 场景",
+          "competitor_hypothesis": "hyp_001"
+        },
+        {
+          "hypothesis_id": "hyp_004",
+          "type": "mechanism",
+          "statement": "LLM hallucination 根因在于自回归生成框架中缺乏显式的真值校验回路。训练目标（最大化下一个 token 似然）与推理目标（生成事实正确内容）之间存在根本性的目标错位。",
+          "evidence_basis": [{"observation_id": "obs_007", "relevant_content": "模型在自我修正时能识别并修正部分 hallucination，但修正率远低于 100%"}],
+          "falsification_condition": "若引入显式真值校验回路后，模型 hallucination 率与原始推理流程无显著差异，则该假说被证伪",
+          "test_method": "A/B 实验：增加真值校验步骤 vs 无校验的标准推理，在事实性问答 benchmark 上比较",
+          "scope_limitation": "聚焦于推理框架层面的目标错位问题",
+          "competitor_hypothesis": "hyp_003"
+        }
+      ],
+      "hypothesis_count": 4,
+      "coverage_report": {"observations_used": 8, "observations_available": 8, "unexplained_observations": []}
+    },
+    "errors": [],
+    "metadata": {"execution_time_ms": 4200}
+  },
+  "skeptic_agent": {
+    "agent_id": "skeptic_agent",
+    "task_id": "demo_001_skeptic",
+    "context_ref": "ctx_20260813202714_1",
+    "status": "success",
+    "output": {
+      "critiques": [
+        {
+          "critique_id": "crit_001",
+          "target_hypothesis_id": "hyp_001",
+          "vulnerability_type": "confounding_variable",
+          "description": "假说将 hallucination 率差异归因于训练数据覆盖度，但忽略了领域复杂度这一关键混淆变量",
+          "severity": "high",
+          "suggested_fix": "控制领域复杂度变量进行对照测试"
+        },
+        {
+          "critique_id": "crit_002",
+          "target_hypothesis_id": "hyp_001",
+          "vulnerability_type": "survivorship_bias",
+          "description": "高覆盖度领域的 hallucination 率可能被系统性低估，评估框架对高覆盖度领域存在易检测偏倚",
+          "severity": "high",
+          "suggested_fix": "区分表面正确与实际理解的响应"
+        },
+        {
+          "critique_id": "crit_003",
+          "target_hypothesis_id": "hyp_001",
+          "vulnerability_type": "hidden_assumption",
+          "description": "假说隐含未经验证的前提假设：覆盖度可准确定义量化、存在客观的 hallucination 度量标准、关系是单调的",
+          "severity": "high",
+          "suggested_fix": "明确定义覆盖度的操作化度量，声明 hallucination 的具体定义维度"
+        },
+        {
+          "critique_id": "crit_004",
+          "target_hypothesis_id": "hyp_001",
+          "vulnerability_type": "reverse_causality",
+          "description": "低覆盖度可能是 hallucination 倾向的结果而非原因",
+          "severity": "medium",
+          "suggested_fix": "通过干预实验验证因果方向"
+        },
+        {
+          "critique_id": "crit_005",
+          "target_hypothesis_id": "hyp_001",
+          "vulnerability_type": "methodological_flaw",
+          "description": "测试方法存在严重的样本代表性偏差，评测基准的领域分布与真实用户查询分布可能存在系统性差异",
+          "severity": "medium",
+          "suggested_fix": "在多个独立评测基准上进行交叉验证"
+        },
+        {
+          "critique_id": "crit_006",
+          "target_hypothesis_id": "hyp_002",
+          "vulnerability_type": "circular_reasoning",
+          "description": "若校准能力通过 hallucination 率来度量，则假说退化为同义反复",
+          "severity": "critical",
+          "suggested_fix": "使用与 hallucination 度量正交的校准能力指标（ECE、Brier Score）"
+        },
+        {
+          "critique_id": "crit_007",
+          "target_hypothesis_id": "hyp_002",
+          "vulnerability_type": "confounding_variable",
+          "description": "校准能力可能受训练数据覆盖度的强烈影响，可能是中介变量而非独立根因",
+          "severity": "high",
+          "suggested_fix": "构建结构方程模型，检验校准能力在控制覆盖度后的独立解释力"
+        },
+        {
+          "critique_id": "crit_008",
+          "target_hypothesis_id": "hyp_002",
+          "vulnerability_type": "hidden_assumption",
+          "description": "假说隐含前提：模型能在所有领域一致感知不确定性、正确表达不确定性等同于不产生幻觉、校准能力是稳定属性",
+          "severity": "high",
+          "suggested_fix": "分层报告不同领域下的校准能力关系，引入有用性作为联合评估指标"
+        },
+        {
+          "critique_id": "crit_009",
+          "target_hypothesis_id": "hyp_002",
+          "vulnerability_type": "methodological_flaw",
+          "description": "跨模型比较混淆了模型规模、训练数据量、训练方法等数十个维度",
+          "severity": "medium",
+          "suggested_fix": "采用配对设计或干预手段改变同一模型的校准能力"
+        },
+        {
+          "critique_id": "crit_010",
+          "target_hypothesis_id": "hyp_002",
+          "vulnerability_type": "logical_gap",
+          "description": "校准能力强不等价于能在低覆盖度领域正确表达不确定性，假说未提供机制说明校准能力应泛化到分布外",
+          "severity": "high",
+          "suggested_fix": "区分分布内校准和分布外校准能力，设计专门的分布外校准测试"
+        }
+      ],
+      "overall_assessment": {
+        "evidence_strength": "C",
+        "critical_issues_found": 3,
+        "major_methodological_gaps": [
+          "hyp_001 和 hyp_002 之间的因果层级关系未澄清",
+          "两个假说均缺乏可操作的变量定义",
+          "hyp_002 存在循环论证风险",
+          "两个假说均依赖观察性证据而非干预性实验",
+          "现有评测基准的领域覆盖度与真实世界分布存在系统性偏差"
+        ]
+      }
+    },
+    "errors": [],
+    "metadata": {"execution_time_ms": 2800}
+  },
+  "red_judge_agent": {
+    "agent_id": "red_judge_agent",
+    "task_id": "demo_001_redteam",
+    "context_ref": "ctx_20260813202714_1",
+    "status": "success",
+    "output": {
+      "red_team_cases": [
+        {
+          "case_id": "rtc_001",
+          "target_hypothesis_id": "hyp_001",
+          "attack_type": "edge_case",
+          "scenario_description": "构造一个完全合成的事实（虚构行星 Zorblax-7），覆盖度严格为零。若覆盖度是主因，模型应产生最大概率的幻觉输出。",
+          "expected_behavior": "模型应输出充满自信的编造内容",
+          "failure_criterion": "模型拒绝回答或表达不确定性",
+          "actual_result": null,
+          "severity": "high"
+        },
+        {
+          "case_id": "rtc_002",
+          "target_hypothesis_id": "hyp_001",
+          "attack_type": "adversarial_input",
+          "scenario_description": "构造边界查询——将已知事实与未知细节混合，测试模型是否能在同一个回答中区分已覆盖和未覆盖的子知识",
+          "expected_behavior": "模型应在低覆盖度子问题上产生幻觉",
+          "failure_criterion": "模型成功识别出哪些子信息不可知，并明确区分已知和未知部分",
+          "actual_result": null,
+          "severity": "medium"
+        },
+        {
+          "case_id": "rtc_003",
+          "target_hypothesis_id": "hyp_001",
+          "attack_type": "assumption_break",
+          "scenario_description": "构造训练数据覆盖度 100% 但内部存在严重矛盾的场景，测试完美覆盖度下内部矛盾是否仍导致幻觉",
+          "expected_behavior": "100% 覆盖度应使幻觉率趋近于零",
+          "failure_criterion": "模型在完美覆盖度下仍产生幻觉",
+          "actual_result": null,
+          "severity": "high"
+        },
+        {
+          "case_id": "rtc_004",
+          "target_hypothesis_id": "hyp_002",
+          "attack_type": "edge_case",
+          "scenario_description": "构造模型已知会系统性高置信度出错的查询（常见科学误解），测试校准完全失效时是否必然对应幻觉",
+          "expected_behavior": "校准失败应直接导致幻觉",
+          "failure_criterion": "模型虽然校准失败但输出正确，或校准良好但输出错误",
+          "actual_result": null,
+          "severity": "high"
+        },
+        {
+          "case_id": "rtc_005",
+          "target_hypothesis_id": "hyp_002",
+          "attack_type": "assumption_break",
+          "scenario_description": "解耦校准质量与事实准确性，构造校准差但知识正确 vs 校准好但知识错误的两组查询",
+          "expected_behavior": "校准质量应比知识准确性更好地预测幻觉",
+          "failure_criterion": "知识准确性比校准质量更好地预测幻觉",
+          "actual_result": null,
+          "severity": "medium"
+        },
+        {
+          "case_id": "rtc_006",
+          "target_hypothesis_id": "hyp_002",
+          "attack_type": "methodology_flaw",
+          "scenario_description": "测试校准能力是否具有测量稳定性，改变 temperature/prompt 模板/少样本示例/输出格式观察 ECE 变化",
+          "expected_behavior": "ECE 应在不同测量条件下保持稳定",
+          "failure_criterion": "ECE 在不同条件下出现显著变化",
+          "actual_result": null,
+          "severity": "medium"
+        },
+        {
+          "case_id": "rtc_007",
+          "target_hypothesis_id": "hyp_001",
+          "attack_type": "extreme_condition",
+          "scenario_description": "将所有不利因素同时推到最极端组合：零覆盖度+数据矛盾+分布外输入+对抗性提示",
+          "expected_behavior": "极端低覆盖度应导致极端高幻觉率",
+          "failure_criterion": "模型的行为模式不能用覆盖度单一变量解释",
+          "actual_result": null,
+          "severity": "low"
+        },
+        {
+          "case_id": "rtc_008",
+          "target_hypothesis_id": "hyp_002",
+          "attack_type": "data_poisoning",
+          "scenario_description": "在正常查询前后附加大量无关的高置信度随机文本，测试校准能力对外部噪声的鲁棒性",
+          "expected_behavior": "校准能力应不受上下文噪声的显著影响",
+          "failure_criterion": "噪声注入后校准行为显著恶化",
+          "actual_result": null,
+          "severity": "medium"
+        }
+      ],
+      "case_count": 8,
+      "coverage_report": {
+        "hypotheses_tested": ["hyp_001", "hyp_002"],
+        "attack_types_used": ["edge_case", "adversarial_input", "assumption_break", "methodology_flaw", "extreme_condition", "data_poisoning"],
+        "uncovered_attack_types": []
+      }
+    },
+    "errors": [],
+    "metadata": {"execution_time_ms": 0}
+  },
+  "archive_agent": {
+    "agent_id": "archive_agent",
+    "task_id": "demo_001_archive",
+    "context_ref": "ctx_20260813202714_1",
+    "status": "success",
+    "output": {
+      "round_number": 1,
+      "round_summary": {
+        "root_task": "探究大语言模型 hallucination 的根因分析",
+        "subtask_dag": {
+          "demo_001_collect": {"type": "perception", "depends_on": []},
+          "demo_001_hypo": {"type": "hypothesis_building", "depends_on": ["demo_001_collect"]},
+          "demo_001_skeptic": {"type": "skepticism", "depends_on": ["demo_001_hypo"]},
+          "demo_001_redteam": {"type": "red_team", "depends_on": ["demo_001_hypo"]},
+          "demo_001_archive": {"type": "archiving", "depends_on": ["demo_001_collect", "demo_001_hypo", "demo_001_skeptic", "demo_001_redteam"]}
+        }
+      },
+      "evidence_chain": [
+        {"stage": "observation", "source": "collect_agent", "content": "从学术论文中采集 hallucination 相关数据", "reliability": 0.85},
+        {"stage": "hypothesis", "source": "hypo_builder_agent", "content": "提出覆盖度假说与校准假说等4条假说", "reliability": 0.70},
+        {"stage": "critique", "source": "skeptic_agent", "content": "对假说进行方法论审查，发现3个关键问题", "reliability": 0.75},
+        {"stage": "red_team", "source": "red_judge_agent", "content": "设计8个对抗性测试用例，覆盖全部6种攻击类型", "reliability": 0.80}
+      ],
+      "key_findings": [
+        "LLM hallucination 根因涉及训练数据覆盖度与不确定性校准两个竞争假说",
+        "覆盖度假说在极端条件下可能失效",
+        "校准假说依赖于模型置信度分数的可靠性",
+        "注意力稀释效应和真值校验缺失是补充性机制假说"
+      ],
+      "unresolved_issues": [
+        "混淆变量（模型规模）未被排除",
+        "不确定性校准能力的可靠性未验证",
+        "覆盖度测量方法缺乏操作定义",
+        "hyp_002 存在循环论证风险"
+      ],
+      "round_confidence": 0.65,
+      "next_round_actions": [
+        "控制混淆变量进行对比实验",
+        "验证置信度分数的可靠性",
+        "统一覆盖度测量方法"
+      ]
+    },
+    "errors": [],
+    "metadata": {"execution_time_ms": 0}
+  }
+}

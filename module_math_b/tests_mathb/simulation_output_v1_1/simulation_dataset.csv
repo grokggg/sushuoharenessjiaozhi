@@ -1,0 +1,11 @@
+scenario_id,name,expected_branch,actual_branch,total_rounds,hash_chain_valid,passed,logical_gap_count,hidden_assumption_count,circular_count,stagnation_severity,stagnation_rounds,proposition_count,proven_count,disproven_count,inconclusive_count,sympy_enabled,lean_enabled,stagnation_enabled,sympy_status,lean_status,stagnation_status
+Z1,sympy_bridge,PROVEN,PROVEN,1,True,True,0,0,0,,0,1,1,0,0,True,False,False,enabled,,
+Z2,威尔逊定理: n 是素数当且仅当 (n-1)! ≡ -1 (mod n),PROVEN,PROVEN,1,True,True,0,0,0,,0,1,1,0,0,False,False,False,,,
+Z3,lean_repl_bridge,PROVEN,PROVEN,1,True,True,0,0,0,,0,1,1,0,0,False,True,False,,disabled,
+Z4,sympy_bridge,DISPROVEN,DISPROVEN,1,True,True,1,1,0,,0,1,0,1,0,True,False,False,enabled,,
+Z5,Euler 多项式素数猜想: n²+n+41 对所有自然数 n 都是素数,DISPROVEN,DISPROVEN,1,True,True,1,0,0,,0,1,0,1,0,False,False,False,,,
+Z6,stagnation_analyzer,DISPROVEN,DISPROVEN,1,True,True,1,0,0,low,0,1,0,1,0,True,False,True,enabled,,enabled
+Z7,stagnation_analyzer,FORCED_TERMINATE,FORCED_TERMINATE,4,True,True,2,1,0,medium,3,1,0,0,1,True,False,True,enabled,,enabled
+Z8,stagnation_analyzer,FORCED_TERMINATE,FORCED_TERMINATE,4,True,True,2,1,1,medium,3,1,0,0,1,False,False,True,,,enabled
+Z9,stagnation_analyzer,FORCED_TERMINATE,FORCED_TERMINATE,4,True,True,2,1,0,medium,3,2,1,0,1,True,True,True,enabled,disabled,enabled
+Z10,stagnation_analyzer,DISPROVEN,DISPROVEN,1,True,True,2,1,0,low,0,3,1,1,1,True,True,True,enabled,disabled,enabled

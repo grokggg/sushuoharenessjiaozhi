@@ -1,0 +1,13 @@
+# Core dependencies
+pytest>=7.4
+pytest-asyncio>=0.23
+aiohttp>=3.9
+
+# LLM API (optional — install for real LLM calls)
+# set LLM_API_KEY env var to enable real calls
+# openai>=1.0
+
+# Dev & Lint (install with: pip install -e ".[dev]")
+# pytest-cov>=4.1
+# ruff>=0.4
+# mypy>=1.8
