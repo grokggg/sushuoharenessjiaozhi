@@ -1480,14 +1480,14 @@ class TestBatchExperimentSchedulerSkeleton:
         assert matrix[0]["task_id"].startswith("batch")
 
     def test_execute_output_contains_status_note(self):
-        """输出包含骨架版本说明"""
+        """输出包含 v1.2 业务逻辑版本说明"""
         scheduler = BatchExperimentScheduler()
         result = scheduler.execute({
             "conjectures": [{"conjecture_id": "c1"}],
             "plugin_configs": [{"name": "sympy_bridge"}],
         })
         assert "status_note" in result.output
-        assert "骨架" in result.output["status_note"]
+        assert "v1.2" in result.output["status_note"]
 
     def test_execute_max_parallel_clamped(self):
         """max_parallel 超出上限时被 clamp 到 8"""
